@@ -38677,17 +38677,17 @@ def t3_average(dataframe, length=5):
   df = dataframe.copy()
 
   df["xe1"] = ta.EMA(df["close"], timeperiod=length)
-  df["xe1"].fillna(0, inplace=True)
+  df["xe1"] = df["xe1"].fillna(0)
   df["xe2"] = ta.EMA(df["xe1"], timeperiod=length)
-  df["xe2"].fillna(0, inplace=True)
+  df["xe2"] = df["xe2"].fillna(0)
   df["xe3"] = ta.EMA(df["xe2"], timeperiod=length)
-  df["xe3"].fillna(0, inplace=True)
+  df["xe3"] = df["xe3"].fillna(0)
   df["xe4"] = ta.EMA(df["xe3"], timeperiod=length)
-  df["xe4"].fillna(0, inplace=True)
+  df["xe4"] = df["xe4"].fillna(0)
   df["xe5"] = ta.EMA(df["xe4"], timeperiod=length)
-  df["xe5"].fillna(0, inplace=True)
+  df["xe5"] = df["xe5"].fillna(0)
   df["xe6"] = ta.EMA(df["xe5"], timeperiod=length)
-  df["xe6"].fillna(0, inplace=True)
+  df["xe6"] = df["xe6"].fillna(0)
   b = 0.7
   c1 = -b * b * b
   c2 = 3 * b * b + 3 * b * b * b
